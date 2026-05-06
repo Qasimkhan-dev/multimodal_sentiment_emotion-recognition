@@ -1,0 +1,22 @@
+{
+  "task": "sentiment",
+  "subset_tag": "20",
+  "num_frames": 8,
+  "face_size": 160,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "epochs": 5,
+  "device": "cuda",
+  "train": {
+    "loss": 1.0360252753686492,
+    "accuracy": 0.47628590514362057
+  },
+  "dev": {
+    "loss": 1.0671656131744385,
+    "accuracy": 0.4329268292682927
+  },
+  "test": {
+    "loss": 1.0406293013156989,
+    "accuracy": 0.47692307692307695
+  }
+}

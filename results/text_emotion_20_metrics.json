@@ -1,0 +1,22 @@
+{
+  "model_name": "roberta-base",
+  "task": "emotion",
+  "subset_tag": "20",
+  "max_len": 128,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "epochs": 5,
+  "device": "cuda",
+  "train": {
+    "loss": 0.5934955483694938,
+    "accuracy": 0.8187290969899665
+  },
+  "dev": {
+    "loss": 1.197611231014041,
+    "accuracy": 0.6012269938650306
+  },
+  "test": {
+    "loss": 1.1870917151550402,
+    "accuracy": 0.609254498714653
+  }
+}

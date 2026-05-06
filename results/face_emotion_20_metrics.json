@@ -1,0 +1,22 @@
+{
+  "task": "emotion",
+  "subset_tag": "20",
+  "num_frames": 8,
+  "face_size": 160,
+  "batch_size": 4,
+  "learning_rate": 0.0001,
+  "epochs": 5,
+  "device": "cuda",
+  "train": {
+    "loss": 1.5287498853677093,
+    "accuracy": 0.47224080267558527
+  },
+  "dev": {
+    "loss": 1.6309847349038153,
+    "accuracy": 0.4294478527607362
+  },
+  "test": {
+    "loss": 1.5208779720536847,
+    "accuracy": 0.4832904884318766
+  }
+}

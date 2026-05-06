@@ -1,0 +1,24 @@
+{
+  "model_name": "facebook/wav2vec2-base",
+  "task": "sentiment",
+  "subset_csv_tag": "20",
+  "audio_folder_tag": "15",
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "epochs": 5,
+  "max_audio_seconds": 8,
+  "target_sr": 16000,
+  "device": "cuda",
+  "train": {
+    "loss": 0.5021054073985144,
+    "accuracy": 0.8660933660933661
+  },
+  "dev": {
+    "loss": 0.5511741290489832,
+    "accuracy": 0.8333333333333334
+  },
+  "test": {
+    "loss": 0.5056823037530733,
+    "accuracy": 0.8584474885844748
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task": "fusion3_sentiment",
+  "modalities": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "text_tag": "20",
+  "audio_tag": "15",
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs": 5,
+  "device": "cuda",
+  "train": {
+    "loss": 0.1975659206875712,
+    "accuracy": 0.9336609336609336
+  },
+  "dev": {
+    "loss": 0.31531191156024024,
+    "accuracy": 0.8571428571428571
+  },
+  "test": {
+    "loss": 0.41826833641692385,
+    "accuracy": 0.8858447488584474
+  }
+}

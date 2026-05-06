@@ -1,0 +1,27 @@
+{
+  "task": "fusion3_taf_sentiment",
+  "modalities": [
+    "text",
+    "audio",
+    "face"
+  ],
+  "text_tag": "20",
+  "audio_tag": "15",
+  "face_tag": "20",
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "epochs": 5,
+  "device": "cuda",
+  "train": {
+    "loss": 0.1562657902333016,
+    "accuracy": 0.9361179361179361
+  },
+  "dev": {
+    "loss": 0.383177087420509,
+    "accuracy": 0.8690476190476191
+  },
+  "test": {
+    "loss": 0.4474239788915469,
+    "accuracy": 0.863013698630137
+  }
+}
