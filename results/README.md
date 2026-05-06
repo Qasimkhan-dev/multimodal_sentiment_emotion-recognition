@@ -1,5 +1,5 @@
 
-# Results Folder
+# Results
 
 This folder contains the evaluation results generated after training and testing the unimodal and multimodal models for the Multimodal Emotion Recognition and Sentiment Analysis project.
 
