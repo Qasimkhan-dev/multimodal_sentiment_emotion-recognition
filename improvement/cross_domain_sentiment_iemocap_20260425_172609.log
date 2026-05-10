@@ -1,0 +1,180 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/logs/cross_domain_sentiment_iemocap_20260425_172609.log
+Downloaded IEMOCAP via KaggleHub: sangayb/iemocap
+KaggleHub dataset path: /root/.cache/kagglehub/datasets/sangayb/iemocap/versions/1
+Using KaggleHub IEMOCAP root: /root/.cache/kagglehub/datasets/sangayb/iemocap/versions/1
+Running cross-domain sentiment on device: cuda
+Source dataset: IEMOCAP Pseudo-Sentiment
+Target dataset: MELD subset (This workspace uses the class-balanced MELD subset files tagged '20', which actually correspond to the 15% subset used for Assignment 3.)
+Target MELD csvs: {'train': PosixPath('/mnt/optimusmesh/checkingfiles/meld_balanced/train_20_sentiment.csv'), 'dev': PosixPath('/mnt/optimusmesh/checkingfiles/meld_balanced/dev_20_sentiment.csv'), 'test': PosixPath('/mnt/optimusmesh/checkingfiles/meld_balanced/test_20_sentiment.csv')}
+Using text backbone: roberta-base
+Target subset sizes: {'train': 1497, 'dev': 164, 'test': 390}
+Source split sizes: {'train': 4341, 'dev': 1538, 'test': 1650}
+
+[iemocap_pseudo_sentiment_pretrain] Epoch 1/5
+Train Loss: 1.0490 | Train Acc: 0.4467
+Dev   Loss: 0.8620 | Dev Acc: 0.5663 | Dev Macro-F1: 0.5299 | Dev Weighted-F1: 0.5940
+Saved best iemocap_pseudo_sentiment_pretrain model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/iemocap_pseudo_sentiment_pretrain/best.pt using dev macro_f1=0.5299
+
+[iemocap_pseudo_sentiment_pretrain] Epoch 2/5
+Train Loss: 0.7872 | Train Acc: 0.6379
+Dev   Loss: 0.8287 | Dev Acc: 0.5741 | Dev Macro-F1: 0.5688 | Dev Weighted-F1: 0.6115
+Saved best iemocap_pseudo_sentiment_pretrain model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/iemocap_pseudo_sentiment_pretrain/best.pt using dev macro_f1=0.5688
+
+[iemocap_pseudo_sentiment_pretrain] Epoch 3/5
+Train Loss: 0.5753 | Train Acc: 0.7574
+Dev   Loss: 0.9166 | Dev Acc: 0.5956 | Dev Macro-F1: 0.5868 | Dev Weighted-F1: 0.6303
+Saved best iemocap_pseudo_sentiment_pretrain model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/iemocap_pseudo_sentiment_pretrain/best.pt using dev macro_f1=0.5868
+
+[iemocap_pseudo_sentiment_pretrain] Epoch 4/5
+Train Loss: 0.4321 | Train Acc: 0.8219
+Dev   Loss: 0.8563 | Dev Acc: 0.6651 | Dev Macro-F1: 0.6117 | Dev Weighted-F1: 0.6842
+Saved best iemocap_pseudo_sentiment_pretrain model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/iemocap_pseudo_sentiment_pretrain/best.pt using dev macro_f1=0.6117
+
+[iemocap_pseudo_sentiment_pretrain] Epoch 5/5
+Train Loss: 0.3610 | Train Acc: 0.8569
+Dev   Loss: 0.8868 | Dev Acc: 0.6684 | Dev Macro-F1: 0.6152 | Dev Weighted-F1: 0.6873
+Saved best iemocap_pseudo_sentiment_pretrain model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/iemocap_pseudo_sentiment_pretrain/best.pt using dev macro_f1=0.6152
+
+========== IEMOCAP_PSEUDO_SENTIMENT_PRETRAIN ==========
+
+TRAIN
+Loss: 0.2664 | Accuracy: 0.8892 | Macro-F1: 0.8842 | Weighted-F1: 0.8905
+              precision    recall  f1-score   support
+
+    negative     0.9623    0.8604    0.9085      2314
+     neutral     0.7800    0.8912    0.8319      1066
+    positive     0.8719    0.9563    0.9122       961
+
+    accuracy                         0.8892      4341
+   macro avg     0.8714    0.9026    0.8842      4341
+weighted avg     0.8975    0.8892    0.8905      4341
+
+DEV
+Loss: 0.8868 | Accuracy: 0.6684 | Macro-F1: 0.6152 | Weighted-F1: 0.6873
+              precision    recall  f1-score   support
+
+    negative     0.8560    0.6952    0.7673       958
+     neutral     0.3219    0.5078    0.3940       258
+    positive     0.6544    0.7174    0.6844       322
+
+    accuracy                         0.6684      1538
+   macro avg     0.6108    0.6401    0.6152      1538
+weighted avg     0.7242    0.6684    0.6873      1538
+
+TEST
+Loss: 0.8815 | Accuracy: 0.6933 | Macro-F1: 0.6739 | Weighted-F1: 0.6985
+              precision    recall  f1-score   support
+
+    negative     0.7931    0.7370    0.7640       806
+     neutral     0.4989    0.6120    0.5497       384
+    positive     0.7326    0.6848    0.7079       460
+
+    accuracy                         0.6933      1650
+   macro avg     0.6749    0.6779    0.6739      1650
+weighted avg     0.7077    0.6933    0.6985      1650
+
+
+========== ZERO SHOT ON MELD ==========
+
+TRAIN
+Loss: 1.4014 | Accuracy: 0.4903 | Macro-F1: 0.4901 | Weighted-F1: 0.4928
+              precision    recall  f1-score   support
+
+    negative     0.4140    0.5351    0.4669       441
+     neutral     0.7225    0.3909    0.5074       706
+    positive     0.4073    0.6343    0.4961       350
+
+    accuracy                         0.4903      1497
+   macro avg     0.5146    0.5201    0.4901      1497
+weighted avg     0.5580    0.4903    0.4928      1497
+
+DEV
+Loss: 1.2943 | Accuracy: 0.5061 | Macro-F1: 0.5081 | Weighted-F1: 0.4997
+              precision    recall  f1-score   support
+
+    negative     0.4921    0.5167    0.5041        60
+     neutral     0.6500    0.3714    0.4727        70
+    positive     0.4262    0.7647    0.5474        34
+
+    accuracy                         0.5061       164
+   macro avg     0.5228    0.5509    0.5081       164
+weighted avg     0.5458    0.5061    0.4997       164
+
+TEST
+Loss: 1.4705 | Accuracy: 0.5103 | Macro-F1: 0.5062 | Weighted-F1: 0.5242
+              precision    recall  f1-score   support
+
+    negative     0.4641    0.5726    0.5126       124
+     neutral     0.8966    0.4149    0.5673       188
+    positive     0.3333    0.6410    0.4386        78
+
+    accuracy                         0.5103       390
+   macro avg     0.5646    0.5428    0.5062       390
+weighted avg     0.6464    0.5103    0.5242       390
+
+
+[meld_finetune] Epoch 1/5
+Train Loss: 1.0081 | Train Acc: 0.5805
+Dev   Loss: 0.8770 | Dev Acc: 0.5610 | Dev Macro-F1: 0.5646 | Dev Weighted-F1: 0.5623
+Saved best meld_finetune model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/meld_finetune/best.pt using dev macro_f1=0.5646
+
+[meld_finetune] Epoch 2/5
+Train Loss: 0.7678 | Train Acc: 0.6994
+Dev   Loss: 0.8613 | Dev Acc: 0.5915 | Dev Macro-F1: 0.5915 | Dev Weighted-F1: 0.5936
+Saved best meld_finetune model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/meld_finetune/best.pt using dev macro_f1=0.5915
+
+[meld_finetune] Epoch 3/5
+Train Loss: 0.6018 | Train Acc: 0.7582
+Dev   Loss: 0.9219 | Dev Acc: 0.6159 | Dev Macro-F1: 0.6136 | Dev Weighted-F1: 0.6107
+Saved best meld_finetune model to /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/meld_finetune/best.pt using dev macro_f1=0.6136
+
+[meld_finetune] Epoch 4/5
+Train Loss: 0.4778 | Train Acc: 0.8297
+Dev   Loss: 1.0544 | Dev Acc: 0.5854 | Dev Macro-F1: 0.5850 | Dev Weighted-F1: 0.5802
+
+[meld_finetune] Epoch 5/5
+Train Loss: 0.3767 | Train Acc: 0.8737
+Dev   Loss: 1.0979 | Dev Acc: 0.5793 | Dev Macro-F1: 0.5767 | Dev Weighted-F1: 0.5745
+
+========== MELD_FINETUNE ==========
+
+TRAIN
+Loss: 0.3837 | Accuracy: 0.8691 | Macro-F1: 0.8611 | Weighted-F1: 0.8691
+              precision    recall  f1-score   support
+
+    negative     0.8589    0.8005    0.8286       441
+     neutral     0.9144    0.8924    0.9032       706
+    positive     0.8010    0.9086    0.8514       350
+
+    accuracy                         0.8691      1497
+   macro avg     0.8581    0.8671    0.8611      1497
+weighted avg     0.8715    0.8691    0.8691      1497
+
+DEV
+Loss: 0.9219 | Accuracy: 0.6159 | Macro-F1: 0.6136 | Weighted-F1: 0.6107
+              precision    recall  f1-score   support
+
+    negative     0.6087    0.4667    0.5283        60
+     neutral     0.6667    0.6571    0.6619        70
+    positive     0.5510    0.7941    0.6506        34
+
+    accuracy                         0.6159       164
+   macro avg     0.6088    0.6393    0.6136       164
+weighted avg     0.6215    0.6159    0.6107       164
+
+TEST
+Loss: 0.8918 | Accuracy: 0.6667 | Macro-F1: 0.6417 | Weighted-F1: 0.6713
+              precision    recall  f1-score   support
+
+    negative     0.6604    0.5645    0.6087       124
+     neutral     0.7886    0.7340    0.7603       188
+    positive     0.4771    0.6667    0.5561        78
+
+    accuracy                         0.6667       390
+   macro avg     0.6420    0.6551    0.6417       390
+weighted avg     0.6855    0.6667    0.6713       390
+
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/metrics.json
+All outputs saved in: /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap
+Completed run. Log saved to: /mnt/optimusmesh/checkingfiles/assignment3_python/outputs/cross_domain_sentiment_iemocap/logs/cross_domain_sentiment_iemocap_20260425_172609.log
