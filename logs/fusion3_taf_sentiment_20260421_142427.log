@@ -1,0 +1,72 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_sentiment/logs/fusion3_taf_sentiment_20260421_142429.log
+Common train ids: 814
+Common dev ids  : 84
+Common test ids : 219
+Fusion input dim: 2048
+
+Epoch 1/5
+Train Loss: 0.1967 | Train Acc: 0.9214
+Dev   Loss: 0.3719 | Dev   Acc: 0.8214
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_sentiment/best_fusion3_taf_sentiment.pt
+
+Epoch 2/5
+Train Loss: 0.2144 | Train Acc: 0.9091
+Dev   Loss: 0.5710 | Dev   Acc: 0.7976
+
+Epoch 3/5
+Train Loss: 0.1563 | Train Acc: 0.9361
+Dev   Loss: 0.3832 | Dev   Acc: 0.8690
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_sentiment/best_fusion3_taf_sentiment.pt
+
+Epoch 4/5
+Train Loss: 0.1567 | Train Acc: 0.9324
+Dev   Loss: 0.4810 | Dev   Acc: 0.8333
+
+Epoch 5/5
+Train Loss: 0.1608 | Train Acc: 0.9238
+Dev   Loss: 0.5878 | Dev   Acc: 0.7857
+
+========== FINAL RESULTS: FUSION3 TAF SENTIMENT ==========
+
+TRAIN
+Loss: 0.1563
+Accuracy: 0.9361
+              precision    recall  f1-score   support
+
+    negative     0.7447    0.6250    0.6796        56
+     neutral     0.9621    0.9730    0.9676       705
+    positive     0.7593    0.7736    0.7664        53
+
+    accuracy                         0.9361       814
+   macro avg     0.8220    0.7905    0.8045       814
+weighted avg     0.9340    0.9361    0.9346       814
+
+DEV
+Loss: 0.3832
+Accuracy: 0.8690
+              precision    recall  f1-score   support
+
+    negative     0.6667    0.7273    0.6957        11
+     neutral     0.9841    0.8857    0.9323        70
+    positive     0.3333    1.0000    0.5000         3
+
+    accuracy                         0.8690        84
+   macro avg     0.6614    0.8710    0.7093        84
+weighted avg     0.9193    0.8690    0.8859        84
+
+TEST
+Loss: 0.4474
+Accuracy: 0.8630
+              precision    recall  f1-score   support
+
+    negative     0.6667    0.2727    0.3871        22
+     neutral     0.9267    0.9415    0.9340       188
+    positive     0.3158    0.6667    0.4286         9
+
+    accuracy                         0.8630       219
+   macro avg     0.6364    0.6270    0.5832       219
+weighted avg     0.8755    0.8630    0.8583       219
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/results/fusion3_taf_sentiment_metrics.json
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_sentiment

@@ -1,0 +1,89 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20/logs/text_emotion_20_20260421_151928.log
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Epoch 1/5
+Train Loss: 1.3576 | Train Acc: 0.5298
+Dev   Loss: 1.4750 | Dev   Acc: 0.4356
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20/best_text_emotion.pt
+
+Epoch 2/5
+Train Loss: 1.0518 | Train Acc: 0.6435
+Dev   Loss: 1.2862 | Dev   Acc: 0.5521
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20/best_text_emotion.pt
+
+Epoch 3/5
+Train Loss: 0.7977 | Train Acc: 0.7411
+Dev   Loss: 1.2482 | Dev   Acc: 0.5890
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20/best_text_emotion.pt
+
+Epoch 4/5
+Train Loss: 0.5935 | Train Acc: 0.8187
+Dev   Loss: 1.1976 | Dev   Acc: 0.6012
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20/best_text_emotion.pt
+
+Epoch 5/5
+Train Loss: 0.5325 | Train Acc: 0.8375
+Dev   Loss: 1.2617 | Dev   Acc: 0.5828
+/mnt/optimusmesh/checkingfiles/train_text_emotion.py:263: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(best_path, map_location=DEVICE))
+
+========== FINAL RESULTS: EMOTION ==========
+
+TRAIN
+Loss: 0.5935
+Accuracy: 0.8187
+              precision    recall  f1-score   support
+
+       anger     0.6524    0.7349    0.6912       166
+     disgust     0.8750    0.1750    0.2917        40
+        fear     1.0000    0.1000    0.1818        40
+         joy     0.7804    0.8851    0.8294       261
+     neutral     0.8715    0.9320    0.9008       706
+     sadness     0.7089    0.5490    0.6188       102
+    surprise     0.8795    0.8111    0.8439       180
+
+    accuracy                         0.8187      1495
+   macro avg     0.8240    0.5982    0.6225      1495
+weighted avg     0.8247    0.8187    0.8034      1495
+
+DEV
+Loss: 1.1976
+Accuracy: 0.6012
+              precision    recall  f1-score   support
+
+       anger     0.3810    0.3636    0.3721        22
+     disgust     0.0000    0.0000    0.0000         3
+        fear     0.0000    0.0000    0.0000         6
+         joy     0.5152    0.7083    0.5965        24
+     neutral     0.7105    0.7714    0.7397        70
+     sadness     0.4000    0.2500    0.3077        16
+    surprise     0.6522    0.6818    0.6667        22
+
+    accuracy                         0.6012       163
+   macro avg     0.3798    0.3965    0.3832       163
+weighted avg     0.5597    0.6012    0.5759       163
+
+TEST
+Loss: 1.1871
+Accuracy: 0.6093
+              precision    recall  f1-score   support
+
+       anger     0.4091    0.3529    0.3789        51
+     disgust     0.0000    0.0000    0.0000        10
+        fear     0.0000    0.0000    0.0000         7
+         joy     0.5556    0.6667    0.6061        60
+     neutral     0.7222    0.8298    0.7723       188
+     sadness     0.2941    0.1613    0.2083        31
+    surprise     0.4615    0.4286    0.4444        42
+
+    accuracy                         0.6093       389
+   macro avg     0.3489    0.3485    0.3443       389
+weighted avg     0.5616    0.6093    0.5810       389
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/results/text_emotion_20_metrics.json
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_emotion_20_train.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_emotion_20_dev.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_emotion_20_test.pt
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_emotion_20

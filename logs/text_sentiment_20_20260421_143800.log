@@ -1,0 +1,74 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_outputs_sentiment_20/logs/text_sentiment_20_20260421_143803.log
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Epoch 1/5
+Train Loss: 0.8558 | Train Acc: 0.6386
+Dev   Loss: 0.9779 | Dev   Acc: 0.5488
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_outputs_sentiment_20/best_text_sentiment.pt
+
+Epoch 2/5
+Train Loss: 0.6359 | Train Acc: 0.7842
+Dev   Loss: 0.8692 | Dev   Acc: 0.6037
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_outputs_sentiment_20/best_text_sentiment.pt
+
+Epoch 3/5
+Train Loss: 0.4793 | Train Acc: 0.8190
+Dev   Loss: 0.9287 | Dev   Acc: 0.6585
+Saved best model to /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_outputs_sentiment_20/best_text_sentiment.pt
+
+Epoch 4/5
+Train Loss: 0.3205 | Train Acc: 0.8958
+Dev   Loss: 1.0110 | Dev   Acc: 0.6159
+
+Epoch 5/5
+Train Loss: 0.2756 | Train Acc: 0.9145
+Dev   Loss: 1.0623 | Dev   Acc: 0.6159
+
+========== FINAL RESULTS: SENTIMENT ==========
+
+TRAIN
+Loss: 0.4793
+Accuracy: 0.8190
+              precision    recall  f1-score   support
+
+    negative     0.8657    0.6871    0.7661       441
+     neutral     0.8396    0.9122    0.8744       706
+    positive     0.7342    0.7971    0.7644       350
+
+    accuracy                         0.8190      1497
+   macro avg     0.8132    0.7988    0.8016      1497
+weighted avg     0.8227    0.8190    0.8168      1497
+
+DEV
+Loss: 0.9287
+Accuracy: 0.6585
+              precision    recall  f1-score   support
+
+    negative     0.7273    0.4000    0.5161        60
+     neutral     0.6667    0.8000    0.7273        70
+    positive     0.5957    0.8235    0.6914        34
+
+    accuracy                         0.6585       164
+   macro avg     0.6632    0.6745    0.6449       164
+weighted avg     0.6741    0.6585    0.6426       164
+
+TEST
+Loss: 0.7705
+Accuracy: 0.7026
+              precision    recall  f1-score   support
+
+    negative     0.7356    0.5161    0.6066       124
+     neutral     0.7339    0.8511    0.7882       188
+    positive     0.5882    0.6410    0.6135        78
+
+    accuracy                         0.7026       390
+   macro avg     0.6859    0.6694    0.6694       390
+weighted avg     0.7053    0.7026    0.6955       390
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/results/text_sentiment_20_metrics.json
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_sentiment_20_train.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_sentiment_20_dev.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/meld_project/outputs/features/text_sentiment_20_test.pt
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/meld_project/outputs/checkpoints/text_outputs_sentiment_20

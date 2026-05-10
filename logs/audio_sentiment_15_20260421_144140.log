@@ -1,0 +1,79 @@
+/opt/conda/envs/sum310/lib/python3.10/site-packages/transformers/configuration_utils.py:364: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  warnings.warn(
+Saving log to: /mnt/optimusmesh/checkingfiles/audio_outputs_sentiment_15/logs/audio_sentiment_15_20260421_144144.log
+/mnt/optimusmesh/checkingfiles/meld_balanced/train_20_sentiment.csv -> usable audio samples: 814
+/mnt/optimusmesh/checkingfiles/meld_balanced/dev_20_sentiment.csv -> usable audio samples: 84
+/mnt/optimusmesh/checkingfiles/meld_balanced/test_20_sentiment.csv -> usable audio samples: 219
+/opt/conda/envs/sum310/lib/python3.10/site-packages/transformers/configuration_utils.py:364: UserWarning: Passing `gradient_checkpointing` to a config initialization is deprecated and will be removed in v5 Transformers. Using `model.gradient_checkpointing_enable()` instead, or if you are using the `Trainer` API, pass `gradient_checkpointing=True` in your `TrainingArguments`.
+  warnings.warn(
+Some weights of Wav2Vec2Model were not initialized from the model checkpoint at facebook/wav2vec2-base and are newly initialized: ['wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original0', 'wav2vec2.encoder.pos_conv_embed.conv.parametrizations.weight.original1']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Epoch 1/5
+Train Loss: 0.4944 | Train Acc: 0.8661
+Dev   Loss: 0.5531 | Dev   Acc: 0.8333
+Saved best model to /mnt/optimusmesh/checkingfiles/audio_outputs_sentiment_15/best_audio_sentiment.pt
+
+Epoch 2/5
+Train Loss: 0.5031 | Train Acc: 0.8661
+Dev   Loss: 0.6098 | Dev   Acc: 0.8333
+
+Epoch 3/5
+Train Loss: 0.4875 | Train Acc: 0.8661
+Dev   Loss: 0.5699 | Dev   Acc: 0.8333
+
+Epoch 4/5
+Train Loss: 0.4899 | Train Acc: 0.8661
+Dev   Loss: 0.5889 | Dev   Acc: 0.8333
+
+Epoch 5/5
+Train Loss: 0.4880 | Train Acc: 0.8661
+Dev   Loss: 0.5808 | Dev   Acc: 0.8333
+
+========== FINAL RESULTS: AUDIO SENTIMENT ==========
+
+TRAIN
+Loss: 0.4944
+Accuracy: 0.8661
+              precision    recall  f1-score   support
+
+    negative     0.0000    0.0000    0.0000        56
+     neutral     0.8661    1.0000    0.9282       705
+    positive     0.0000    0.0000    0.0000        53
+
+    accuracy                         0.8661       814
+   macro avg     0.2887    0.3333    0.3094       814
+weighted avg     0.7501    0.8661    0.8039       814
+
+DEV
+Loss: 0.5531
+Accuracy: 0.8333
+              precision    recall  f1-score   support
+
+    negative     0.0000    0.0000    0.0000        11
+     neutral     0.8333    1.0000    0.9091        70
+    positive     0.0000    0.0000    0.0000         3
+
+    accuracy                         0.8333        84
+   macro avg     0.2778    0.3333    0.3030        84
+weighted avg     0.6944    0.8333    0.7576        84
+
+TEST
+Loss: 0.5025
+Accuracy: 0.8584
+              precision    recall  f1-score   support
+
+    negative     0.0000    0.0000    0.0000        22
+     neutral     0.8584    1.0000    0.9238       188
+    positive     0.0000    0.0000    0.0000         9
+
+    accuracy                         0.8584       219
+   macro avg     0.2861    0.3333    0.3079       219
+weighted avg     0.7369    0.8584    0.7931       219
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/results/audio_sentiment_15_metrics.json
+Saved features to: /mnt/optimusmesh/checkingfiles/features/audio_sentiment_15_train.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/features/audio_sentiment_15_dev.pt
+Saved features to: /mnt/optimusmesh/checkingfiles/features/audio_sentiment_15_test.pt
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/audio_outputs_sentiment_15

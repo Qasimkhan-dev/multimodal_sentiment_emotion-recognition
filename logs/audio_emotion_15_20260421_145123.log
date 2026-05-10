@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/mnt/optimusmesh/checkingfiles/train_audio_emotion.py", line 14, in <module>
+    import torchaudio
+  File "/opt/conda/envs/sum310/lib/python3.10/site-packages/torchaudio/__init__.py", line 2, in <module>
+    from . import _extension  # noqa  # usort: skip
+  File "/opt/conda/envs/sum310/lib/python3.10/site-packages/torchaudio/_extension/__init__.py", line 38, in <module>
+    _load_lib("libtorchaudio")
+  File "/opt/conda/envs/sum310/lib/python3.10/site-packages/torchaudio/_extension/utils.py", line 60, in _load_lib
+    torch.ops.load_library(path)
+  File "/opt/conda/envs/sum310/lib/python3.10/site-packages/torch/_ops.py", line 933, in load_library
+    ctypes.CDLL(path)
+  File "/opt/conda/envs/sum310/lib/python3.10/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: /opt/conda/envs/sum310/lib/python3.10/site-packages/torchaudio/lib/libtorchaudio.so: undefined symbol: _ZNK3c105Error4whatEv

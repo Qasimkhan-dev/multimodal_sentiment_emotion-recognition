@@ -1,0 +1,89 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/fusion3_outputs_emotion/logs/fusion3_emotion_20260421_150814.log
+/mnt/optimusmesh/checkingfiles/train_fusion3_emotion.py:70: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(path, map_location="cpu")
+Common train ids: 1494
+Common dev ids  : 163
+Common test ids : 389
+Fusion input dim: 2816
+
+Epoch 1/5
+Train Loss: 0.6902 | Train Acc: 0.7885
+Dev   Loss: 1.3786 | Dev   Acc: 0.5215
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_outputs_emotion/best_fusion3_emotion.pt
+
+Epoch 2/5
+Train Loss: 0.6325 | Train Acc: 0.8079
+Dev   Loss: 1.3441 | Dev   Acc: 0.5951
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_outputs_emotion/best_fusion3_emotion.pt
+
+Epoch 3/5
+Train Loss: 0.6458 | Train Acc: 0.7925
+Dev   Loss: 1.3926 | Dev   Acc: 0.6074
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_outputs_emotion/best_fusion3_emotion.pt
+
+Epoch 4/5
+Train Loss: 0.6031 | Train Acc: 0.8052
+Dev   Loss: 1.4613 | Dev   Acc: 0.5706
+
+Epoch 5/5
+Train Loss: 0.5557 | Train Acc: 0.8313
+Dev   Loss: 1.5680 | Dev   Acc: 0.5828
+/mnt/optimusmesh/checkingfiles/train_fusion3_emotion.py:270: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(best_path, map_location=DEVICE))
+
+========== FINAL RESULTS: FUSION3 EMOTION ==========
+
+TRAIN
+Loss: 0.6458
+Accuracy: 0.7925
+              precision    recall  f1-score   support
+
+       anger     0.5541    0.7711    0.6448       166
+     disgust     0.0000    0.0000    0.0000        40
+        fear     0.0000    0.0000    0.0000        40
+         joy     0.8023    0.8084    0.8053       261
+     neutral     0.8424    0.9631    0.8987       705
+     sadness     0.7000    0.4804    0.5698       102
+    surprise     0.9435    0.6500    0.7697       180
+
+    accuracy                         0.7925      1494
+   macro avg     0.5489    0.5247    0.5269      1494
+weighted avg     0.7607    0.7925    0.7681      1494
+
+DEV
+Loss: 1.3926
+Accuracy: 0.6074
+              precision    recall  f1-score   support
+
+       anger     0.3462    0.4091    0.3750        22
+     disgust     0.0000    0.0000    0.0000         3
+        fear     0.0000    0.0000    0.0000         6
+         joy     0.5385    0.5833    0.5600        24
+     neutral     0.6905    0.8286    0.7532        70
+     sadness     0.3636    0.2500    0.2963        16
+    surprise     0.8750    0.6364    0.7368        22
+
+    accuracy                         0.6074       163
+   macro avg     0.4020    0.3868    0.3888       163
+weighted avg     0.5763    0.6074    0.5851       163
+
+TEST
+Loss: 1.3176
+Accuracy: 0.6350
+              precision    recall  f1-score   support
+
+       anger     0.4138    0.4706    0.4404        51
+     disgust     0.0000    0.0000    0.0000        10
+        fear     0.0000    0.0000    0.0000         7
+         joy     0.6452    0.6667    0.6557        60
+     neutral     0.7124    0.8564    0.7778       188
+     sadness     0.3125    0.1613    0.2128        31
+    surprise     0.6296    0.4048    0.4928        42
+
+    accuracy                         0.6350       389
+   macro avg     0.3876    0.3657    0.3685       389
+weighted avg     0.5909    0.6350    0.6049       389
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/results/fusion3_emotion_metrics.json
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/fusion3_outputs_emotion

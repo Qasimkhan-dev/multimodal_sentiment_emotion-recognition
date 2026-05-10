@@ -1,0 +1,84 @@
+Saving log to: /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_emotion/logs/fusion3_taf_emotion_20260421_143625.log
+Common train ids: 1494
+Common dev ids  : 163
+Common test ids : 389
+Fusion input dim: 2048
+
+Epoch 1/5
+Train Loss: 0.6264 | Train Acc: 0.7999
+Dev   Loss: 1.3206 | Dev   Acc: 0.5706
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_emotion/best_fusion3_taf_emotion.pt
+
+Epoch 2/5
+Train Loss: 0.5818 | Train Acc: 0.8106
+Dev   Loss: 1.5379 | Dev   Acc: 0.5828
+Saved best model to /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_emotion/best_fusion3_taf_emotion.pt
+
+Epoch 3/5
+Train Loss: 0.5038 | Train Acc: 0.8307
+Dev   Loss: 1.4525 | Dev   Acc: 0.5828
+
+Epoch 4/5
+Train Loss: 0.4969 | Train Acc: 0.8340
+Dev   Loss: 1.5269 | Dev   Acc: 0.5583
+
+Epoch 5/5
+Train Loss: 0.4863 | Train Acc: 0.8487
+Dev   Loss: 1.7534 | Dev   Acc: 0.5828
+
+========== FINAL RESULTS: FUSION3 TAF EMOTION ==========
+
+TRAIN
+Loss: 0.5818
+Accuracy: 0.8106
+              precision    recall  f1-score   support
+
+       anger     0.5489    0.7771    0.6434       166
+     disgust     0.0000    0.0000    0.0000        40
+        fear     1.0000    0.0250    0.0488        40
+         joy     0.8577    0.8314    0.8444       261
+     neutral     0.8646    0.9603    0.9099       705
+     sadness     0.7778    0.4118    0.5385       102
+    surprise     0.8735    0.8056    0.8382       180
+
+    accuracy                         0.8106      1494
+   macro avg     0.7032    0.5444    0.5462      1494
+weighted avg     0.8040    0.8106    0.7874      1494
+
+DEV
+Loss: 1.5379
+Accuracy: 0.5828
+              precision    recall  f1-score   support
+
+       anger     0.3200    0.3636    0.3404        22
+     disgust     0.0000    0.0000    0.0000         3
+        fear     0.0000    0.0000    0.0000         6
+         joy     0.5172    0.6250    0.5660        24
+     neutral     0.6923    0.7714    0.7297        70
+     sadness     0.3333    0.1875    0.2400        16
+    surprise     0.6818    0.6818    0.6818        22
+
+    accuracy                         0.5828       163
+   macro avg     0.3635    0.3756    0.3654       163
+weighted avg     0.5414    0.5828    0.5583       163
+
+TEST
+Loss: 1.4831
+Accuracy: 0.6324
+              precision    recall  f1-score   support
+
+       anger     0.4386    0.4902    0.4630        51
+     disgust     0.0000    0.0000    0.0000        10
+        fear     0.0000    0.0000    0.0000         7
+         joy     0.6316    0.6000    0.6154        60
+     neutral     0.7318    0.8564    0.7892       188
+     sadness     0.3571    0.1613    0.2222        31
+    surprise     0.4634    0.4524    0.4578        42
+
+    accuracy                         0.6324       389
+   macro avg     0.3747    0.3658    0.3639       389
+weighted avg     0.5871    0.6324    0.6042       389
+
+Saved metrics json to: /mnt/optimusmesh/checkingfiles/results/fusion3_taf_emotion_metrics.json
+
+All outputs saved in: /mnt/optimusmesh/checkingfiles/fusion3_taf_outputs_emotion
